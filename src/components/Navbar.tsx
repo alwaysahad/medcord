@@ -1,6 +1,6 @@
-import React from 'react';
-import { Bell, Settings, User, Moon, Sun } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
+import React from "react";
+import { Bell, Settings, User, Moon, Sun } from "lucide-react";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
@@ -15,22 +15,26 @@ export default function Navbar() {
             </span>
           </div>
           <div className="flex items-center space-x-4">
-            <button 
+            <button
               onClick={toggleTheme}
               className="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 
                        rounded-full hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-all duration-200"
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {theme === "dark" ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
             </button>
-            <button 
+            <button
               className="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 
                        rounded-full hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-all duration-200"
               aria-label="Notifications"
             >
               <Bell className="h-5 w-5" />
             </button>
-            <button 
+            <button
               className="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 
                        rounded-full hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-all duration-200"
               aria-label="Settings"
@@ -38,8 +42,10 @@ export default function Navbar() {
               <Settings className="h-5 w-5" />
             </button>
             <div className="flex items-center space-x-2">
-              <span className="text-sm font-medium dark:text-gray-300">John Doe</span>
-              <button 
+              <span className="text-sm font-medium dark:text-gray-300">
+                Raman Singh
+              </span>
+              <button
                 className="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 
                          rounded-full hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-all duration-200"
                 aria-label="User profile"
